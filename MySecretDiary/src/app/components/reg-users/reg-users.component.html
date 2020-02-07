@@ -1,0 +1,14 @@
+<table border="1">
+  <thead></thead>
+  <tr>
+    <th>username</th>
+    <th>password</th>
+    </tr>
+  
+  <tbody>
+      <tr *ngFor="let regUser of regUsers">
+          <td>{{regUser.username}}</td>
+          <td>{{regUser.password}}</td>
+          </tr>
+  </tbody>
+    </table>

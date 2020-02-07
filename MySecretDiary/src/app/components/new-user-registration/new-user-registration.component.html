@@ -1,0 +1,36 @@
+<h3>
+  <form class="form-horizontal" [formGroup]="loginForm" style="width: 400px;">
+
+    <!-- <div class="form-group row">
+      <label class="col" for="id">Id</label>
+      <div class="col">
+        <input id="id" type="text" class="form-control" formControlName="id"> 
+     </div>
+    </div>  -->
+
+      <div class="form-group row">
+        <label class="col" for="username">user name</label>
+        <div class="col">
+          <input id="username" type="text" class="form-control" formControlName="username">
+        </div>
+      </div>
+
+      <div class="form-group row">
+          <label class="col" for="password">password</label>
+          <div class="col">
+            <input id="password" type="text" class="form-control" formControlName="password">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col" for="password">email</label>
+          <div class="col">
+            <input id="email" type="text" class="form-control" formControlName="email">
+          </div>
+        </div>
+
+       <button class="btn"
+       [ngClass]="{'btn-primary': loginForm.valid, 'btn-danger': loginForm.invalid}"
+       (click)="save()">Save details</button> 
+  </form>
+</h3>

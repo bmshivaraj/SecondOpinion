@@ -1,0 +1,29 @@
+{
+  "reports": [
+    {
+      "id": 1,
+      "title": "X-Ray report",
+      "customerName": "shivaraj",
+      "image": "assets/images/xr1.jpg"
+    },
+	{
+      "id": 2,
+      "title": "X-Ray report",
+      "customerName": "satish",
+      "image": "assets/images/xr2.jpg"
+	},
+	{
+      "id": 3,
+      "title": "ecg report",
+      "customerName": "shivaraj",
+      "image": "assets/images/ecg1.jpg"
+    },
+	{
+      "id": 4,
+      "title": "ecg report",
+      "customerName": "satish",
+      "image": "assets/images/ecg2.jpg"
+	}
+  ]
+  
+}

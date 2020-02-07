@@ -1,0 +1,27 @@
+
+<div class="card" style="width: 900px" [ngClass]="inCart ? 'in-cartColor' : 'default-cartColor'">
+
+    <!-- <img [src] = "report.image" [alt]="report.title" class = "card-img-top"> -->
+    <div class = "card-body">
+      <h5 class="card-title"> {{ report.reportTitle | uppercase }}</h5>
+      <h5 class="card-title"> {{ report.referenceDoctor }}</h5>
+      <h5 class="card-title"> {{ report.visitDate }}</h5>
+      <h6 class="card-patient-comment"> <i>Patient queries:</i></h6>
+      <h5 class="card-title"> {{ report.patientComment }}</h5>
+      <!-- <h5 class="card-title"> {{ report.secOpiComment }}</h5> -->
+      <form class="form-horizontal" #f1="ngForm">
+        <div class="form-group row">
+          <label class="col-sm-2" for="name"><i>Doctor's advice:</i></label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" 
+            id="name" name="name" #tfName="ngModel" [(ngModel)]="report.secOpiComment">
+          </div>
+        </div>
+          
+        <button class="btn"
+          [ngClass] = "{'btn-primary' : f1.valid, 'btn-secondary': f1.invalid}"
+          [disabled]="f1.invalid" (click) = "submitOpinionReport()">submit</button>
+      </form>
+      
+    </div>
+  </div>

@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+
+      <a class="navbar-brand" href="" [routerLink]="['/']">
+          <h1>
+
+              <img style="height: 50px;"
+              src="assets/images/stethoscope2.png" alt="">
+              {{pageTitle}}
+        
+              <div class="logName">
+                    <h5>
+                        <div *ngIf="loggedInUser">welcome <i>{{loggedInUser}}</i></div>
+                    </h5>
+               </div>
+          </h1>
+      </a>
+      
+  </div>
+</nav>
+<br><br>

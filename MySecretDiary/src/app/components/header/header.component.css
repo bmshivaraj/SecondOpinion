@@ -1,0 +1,14 @@
+
+div.container
+{
+    text-align: center;
+    /* background-image: url(/src/assets/images/footerImage.png);  */
+    /* background-color: white */
+    
+}
+
+ div.logName
+ {
+    width:1000px;
+    text-align: right;
+ }

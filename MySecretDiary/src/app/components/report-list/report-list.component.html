@@ -1,0 +1,12 @@
+<!-- <ul>
+    <li *ngFor="let p of reports">
+      {{ p.id }}
+    </li>
+  </ul> -->
+
+<div class="row">
+    
+    <div class="col-md-12" *ngFor="let p of reports">
+      <app-report-card [report]="p"></app-report-card>
+    </div>
+  </div>

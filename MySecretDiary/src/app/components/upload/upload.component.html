@@ -1,0 +1,71 @@
+<h3>
+    <form class="form-horizontal" [formGroup]="uploadForm" style="width: 400px;">
+  
+      <!-- <div class="form-group row">
+        <label class="col" for="id">Id</label>
+        <div class="col">
+          <input id="id" type="text" class="form-control" formControlName="id"> 
+       </div>
+      </div>  -->
+  
+        <div class="form-group row">
+          <label class="col" for="reportNumber">report Number</label>
+          <div class="col">
+            <input id="reportNumber" type="text" class="form-control" formControlName="reportNumber">
+          </div>
+        </div>
+  
+        <div class="form-group row">
+            <label class="col" for="reportTitle">Report Title</label>
+            <div class="col">
+              <input id="reportTitle" type="text" class="form-control" formControlName="reportTitle">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col" for="imagePath">Image Path
+            <button class="btn btn-link" (click)="addReport()">+</button></label>
+            <div class="col" formArrayName="imagePath">
+              <div *ngFor="let sk of uploadForm.get('imagePath')['controls']; index as i">
+              <input id="imagePath" type="text" class="form-control" [formControlName]="i">
+            </div>
+          </div>
+        </div>
+
+          <div class="form-group row">
+            <label class="col" for="referenceDoctor">referenceDoctor</label>
+            <div class="col">
+              <input id="referenceDoctor" type="text" class="form-control" formControlName="referenceDoctor">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col" for="visitDate">visitDate</label>
+            <div class="col">
+              <input id="visitDate" type="text" class="form-control" formControlName="visitDate">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col" for="patientComment">patientComment</label>
+            <div class="col">
+              <input id="patientComment" type="text" class="form-control" formControlName="patientComment">
+            </div>
+          </div>
+          
+  
+      
+  
+          <div class="form-group row">
+            <label class="col" for="secOpiComment">secOpiComment</label>
+            <div class="col">
+              <input id="secOpiComment" type="text" class="form-control" formControlName="secOpiComment">
+            </div>
+          </div>
+  
+         <button class="btn"
+         [ngClass]="{'btn-primary': uploadForm.valid, 'btn-danger': uploadForm.invalid}"
+         (click)="save()">Save details</button> 
+    </form>
+  </h3>
+  
