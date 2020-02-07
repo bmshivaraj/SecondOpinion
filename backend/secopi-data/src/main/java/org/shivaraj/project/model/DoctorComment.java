@@ -1,0 +1,54 @@
+package org.shivaraj.project.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
+@Table(name = "doctorComment")
+public class DoctorComment {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@Column(name = "doctor_comment_id", updatable = false, nullable = false)
+	private long doctorCommentId;
+	
+	String drComment;
+
+	public String getDrComment() {
+		return drComment;
+	}
+
+	public void setDrComment(String drComment) {
+		this.drComment = drComment;
+	}
+	
+	@JsonIgnore
+	@ManyToOne
+	@JoinColumn(name="report_id")
+	private Report report;
+
+	public long getId() {
+		return doctorCommentId;
+	}
+
+	public void setId(long id) {
+		this.doctorCommentId = id;
+	}
+
+	public Report getReport() {
+		return report;
+	}
+
+	public void setReport(Report report) {
+		this.report = report;
+	}
+	
+}

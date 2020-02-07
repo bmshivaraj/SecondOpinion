@@ -1,0 +1,7 @@
+package org.shivaraj.project.model;
+
+import org.springframework.data.repository.CrudRepository;
+
+public class ScanCopyDataRepository  extends CrudRepository<Report, Long> {
+
+}

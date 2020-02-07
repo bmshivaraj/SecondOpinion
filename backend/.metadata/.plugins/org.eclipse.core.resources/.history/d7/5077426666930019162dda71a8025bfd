@@ -1,0 +1,51 @@
+package org.shivaraj.project.report;
+
+public class Report {
+
+	private int id;
+	private String title;
+	private String customerName;
+	private String image;
+	
+	
+	public Report() {
+	}
+	
+	
+	public Report(int id, String title, String customerName, String image) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.customerName = customerName;
+		this.image = image;
+	}
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getCustomerName() {
+		return customerName;
+	}
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	
+	
+	
+}

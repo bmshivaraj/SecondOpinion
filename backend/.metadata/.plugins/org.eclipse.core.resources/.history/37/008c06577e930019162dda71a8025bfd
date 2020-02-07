@@ -1,0 +1,20 @@
+package org.shivaraj.project.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class ScanCopy {
+
+	@Id
+	private String id;
+	
+	private String scanImage;
+	
+	@ManyToOne
+	@JoinColumn(name="report_id")
+	private String reportNumber;
+	
+}

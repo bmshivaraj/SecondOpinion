@@ -1,0 +1,63 @@
+package org.shivaraj.project.report;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "report_db")
+public class Report {
+
+	@Id
+	private String reportNumber;
+	private String reportTitle;
+	private String referenceDoctor;
+	
+	private String visitDate;
+	private String patientComment;
+	private String secOpiComment;
+	
+	
+	
+	public String getReportNumber() {
+		return reportNumber;
+	}
+	public void setReportNumber(String reportNumber) {
+		this.reportNumber = reportNumber;
+	}
+	public String getReportTitle() {
+		return reportTitle;
+	}
+	public void setReportTitle(String reportTitle) {
+		this.reportTitle = reportTitle;
+	}
+	public String getReferenceDoctor() {
+		return referenceDoctor;
+	}
+	public void setReferenceDoctor(String referenceDoctor) {
+		this.referenceDoctor = referenceDoctor;
+	}
+
+	public String getVisitDate() {
+		return visitDate;
+	}
+	public void setVisitDate(String visitDate) {
+		this.visitDate = visitDate;
+	}
+	public String getPatientComment() {
+		return patientComment;
+	}
+	public void setPatientComment(String patientComment) {
+		this.patientComment = patientComment;
+	}
+	public String getSecOpiComment() {
+		return secOpiComment;
+	}
+	public void setSecOpiComment(String secOpiComment) {
+		this.secOpiComment = secOpiComment;
+	}
+	 
+	
+	
+	
+}

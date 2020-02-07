@@ -1,0 +1,12 @@
+package org.shivaraj.project.model;
+
+import javax.persistence.ManyToOne;
+
+public class ScanCopy {
+
+	private String scanImage;
+	
+	@ManyToOne
+	private String reportNumber;
+	
+}

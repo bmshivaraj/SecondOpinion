@@ -1,0 +1,5 @@
+package org.shivaraj.project.model;
+
+public class ReportDataRepositoryImpl {
+
+}

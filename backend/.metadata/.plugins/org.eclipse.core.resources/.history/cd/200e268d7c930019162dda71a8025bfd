@@ -1,0 +1,10 @@
+package org.shivaraj.project.model;
+
+public class ScanCopy {
+
+	private String scanImage;
+	
+	@ManyToOne()
+	private String reportNumber;
+	
+}

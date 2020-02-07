@@ -1,0 +1,82 @@
+package org.shivaraj.project.controller;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import org.shivaraj.project.dao.ReportService;
+import org.shivaraj.project.dao.ScanCopyService;
+import org.shivaraj.project.model.Report;
+import org.shivaraj.project.model.ScanCopy;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+@RestController
+public class ReportController {
+	
+	@Autowired
+	private ReportService reportService;
+	
+	@CrossOrigin(origins = "http://localhost:4200")
+	@RequestMapping(value="/reports", method=RequestMethod.GET)
+	public  List<Report> getAllReports()
+	{
+		
+		/*Report report = new Report();
+		report.setReportNumber("234");
+		report.setReportTitle("fracture report");
+		report.setVisitDate("01-11-2019");
+		report.setReferenceDoctor("mahesh");
+		List userComments = new ArrayList();
+		userComments.add("user comment 1");
+		userComments.add("userComment 2");
+		report.setUserComments(userComments);
+		
+		List doctorComments = new ArrayList();
+		doctorComments.add("doctor comment1");
+		doctorComments.add("doctor comment2");
+		
+		report.setDoctorComments(doctorComments);
+		
+		List scanCopies = new ArrayList();
+		scanCopies.add("scancopy1 image");
+		scanCopies.add("scan copy 2 minage");
+		
+		report.setScanCopies(scanCopies);
+		report.setScanCopies(scanCopies);
+		
+		reportService.addReport(report); */
+		
+		return reportService.getAllReports();
+	}
+	
+	@CrossOrigin(origins = "http://localhost:4200")
+	@RequestMapping(value="/reports/{reportNumber}", method=RequestMethod.GET)
+	public  Report getReport(@PathVariable String reportNumber)
+	{
+		return reportService.findByReportNumber(reportNumber);
+	}
+	
+	@CrossOrigin
+	@RequestMapping(method=RequestMethod.POST, value="/reports")
+	public void addReport(@RequestBody Report report)
+	{
+		reportService.addReport(report);
+	}
+	
+//	//@CrossOrigin(origins = "http://localhost:4200")
+//	@RequestMapping("/login")
+//	public  String login()
+//	{
+//		System.out.println("login works!");
+//		return "login works!";
+//	}
+
+}

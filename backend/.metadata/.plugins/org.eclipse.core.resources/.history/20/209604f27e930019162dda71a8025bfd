@@ -1,0 +1,51 @@
+package org.shivaraj.project.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class ScanCopy {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@Column(name = "id", updatable = false, nullable = false)
+	private long id;
+	
+	private String scanImage;
+	
+	@ManyToOne
+	@JoinColumn(name="report_id")
+	private String reportNumber;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getScanImage() {
+		return scanImage;
+	}
+
+	public void setScanImage(String scanImage) {
+		this.scanImage = scanImage;
+	}
+
+	public String getReportNumber() {
+		return reportNumber;
+	}
+
+	public void setReportNumber(String reportNumber) {
+		this.reportNumber = reportNumber;
+	}
+	
+	
+	
+}

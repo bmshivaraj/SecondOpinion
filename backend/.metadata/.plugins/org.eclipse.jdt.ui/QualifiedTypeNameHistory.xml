@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.shivaraj.project.model.Report"/>
+<fullyQualifiedTypeName name="javax.persistence.FetchType"/>
+<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+<fullyQualifiedTypeName name="org.shivaraj.project.model.UserComment"/>
+<fullyQualifiedTypeName name="org.shivaraj.project.model.DoctorComment"/>
+</qualifiedTypeNameHistroy>
